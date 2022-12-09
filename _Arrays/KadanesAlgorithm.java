@@ -13,6 +13,11 @@ public class KadanesAlgorithm {
         System.out.println(maxSubArray(input)); //23
     }
     public static int maxSubArray(int[] nums) {
+        //Edge case: empty or null input
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        
         int currentSum=Integer.MIN_VALUE;
         int maxSum=Integer.MIN_VALUE;
         for(int i=0; i<nums.length; i++){
