@@ -9,7 +9,7 @@ public class BubbleSort {
         boolean swapped;
         for(int i=0; i<array.length-1; i++){
             swapped=false;
-            //for each pass/step max element will come a last respective index
+            //for each pass/step max element will come at the last respective index
             for(int j=0; j<array.length-1-i; j++){
                 //swap if the current element is smaller than previous item
                 if(array[j]>array[j+1]){
