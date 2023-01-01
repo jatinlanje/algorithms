@@ -12,6 +12,7 @@ public class KadanesAlgorithm {
 
         System.out.println(maxSubArray(input)); //23
     }
+    //Kadanes Algorithm is used to find maximum sum subarray
     public static int maxSubArray(int[] nums) {
         //Edge case: empty or null input
         if (nums == null || nums.length == 0) {
