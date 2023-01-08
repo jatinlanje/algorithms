@@ -22,7 +22,7 @@ public class PrintLinkedList {
         System.out.println(node.next.next.val); //9
         System.out.println();
         
-        node.printLinkedList(node); 
+        node.printLinkedList(node); //3->6->9->
     }
 }
 
