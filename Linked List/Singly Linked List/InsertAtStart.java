@@ -50,6 +50,9 @@ class ListNode{ //self-referential class
         ListNode newNode = new ListNode(val); //create a new node
         newNode.next=head; //pointing new node to current head
         head=newNode; //now newNode is our new head
-        return head; //otherwise scope will end here only 
+        if(tail==null){
+            tail=head;
+        }
+        return head; //otherwise scope will end here only
     } //TC: O(1)
 }
