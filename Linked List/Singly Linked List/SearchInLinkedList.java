@@ -6,9 +6,9 @@ public class SearchInLinkedList {
         node.next= new ListNode(6);
         node.next.next= new ListNode(9);
 
-        node.printLinkedList(node);
+        node.printLinkedList(node); //3->6->9->
         System.out.println();
-        System.out.println(node.searchInLinkedList(node,1));
+        System.out.println(node.searchInLinkedList(node,1)); //false
 
     }
 }
