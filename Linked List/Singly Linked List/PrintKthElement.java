@@ -1,4 +1,4 @@
-public class PrintKthElementInLinkedList {
+public class PrintKthElement {
     public static void main(String[] args) {
         System.out.println();
         ListNode node = new ListNode();
@@ -37,7 +37,7 @@ class ListNode{ //self-referential class
         //System.out.println("NULL");
     }
 
-    public int printKthElementInLinkedList(ListNode head, int k){ //0 based indexing
+    public int printKthElement(ListNode head, int k){ //0 based indexing
         int count=0;
         ListNode current=head;
         while(current!=null){
