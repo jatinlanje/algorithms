@@ -57,6 +57,9 @@ class ListNode{ //self-referential class
      */
 
     public ListNode insetAtKthPosition(ListNode head,int val, int k){
+        if (head==null) {
+            return null;
+        }
         if(k==0){
             insertAtStart(head,val);
         }
