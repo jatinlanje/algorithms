@@ -39,16 +39,6 @@ class ListNode{ //self-referential class
         //System.out.println("NULL");
     }
 
-    public ListNode insertAtStart(ListNode head,int val){
-        ListNode newNode = new ListNode(val); //create a new node
-        newNode.next=head; //pointing new node to current head
-        head=newNode; //now newNode is our new head
-        if(tail==null){
-            tail=head;
-        }
-        return head; //otherwise scope will end here only
-    } //TC: O(1)
-
     /*
     1. Create a new node with the value that you want to insert.
     2. Check if the linked list is empty. If it is, set the head of the linked list to the new node.
