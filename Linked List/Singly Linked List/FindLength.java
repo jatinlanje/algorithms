@@ -1,4 +1,4 @@
-public class FindLengthOfLinkedList {
+public class FindLength {
     public static void main(String[] args) {
         System.out.println();
         ListNode node = new ListNode();
@@ -37,7 +37,7 @@ class ListNode{ //self-referential class
         //System.out.println("NULL");
     }
 
-    public int findLengthOfLinkedList(ListNode head){
+    public int findLength(ListNode head){
         int length=0;
         ListNode current=head;
         while(current!=null){
