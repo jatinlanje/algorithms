@@ -63,7 +63,7 @@ class ListNode{ //self-referential class
         ListNode newNode = new ListNode(val); //create a new node
         int count=0;
         ListNode current=head;
-        while(count<k-1 && current != null){ //to get k-1 node
+        while(count<k-1 && current.next!=null){ //to get k-1 node
             current=current.next;
             count++;
         }
