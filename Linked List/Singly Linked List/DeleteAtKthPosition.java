@@ -16,7 +16,6 @@ public class DeleteAtKthPosition {
     }
 }
 
-// nested class to define linked list node
 class ListNode{ //self-referential class
     int val; //stores the element
     ListNode next; //stores the reference to the next node in the list by default null
