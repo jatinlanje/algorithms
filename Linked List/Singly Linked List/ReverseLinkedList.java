@@ -55,3 +55,4 @@ class ListNode{ //self-referential class
         return h2;
     }
 }
+//After the loop breaks, where will the head point to? last non-null node
