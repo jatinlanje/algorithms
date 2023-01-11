@@ -5,7 +5,7 @@ public class InsertAtStart {
         node=node.insertAtStart(node,12);
         node=node.insertAtStart(node,9);
         node=node.insertAtStart(node,6);
-        node=node.insertAtStart(node,3);
+        node=node.insertAtStart(node,3); ////3->6->9->12->15->
 
         node.printLinkedList(node);
     }
