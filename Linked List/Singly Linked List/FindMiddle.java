@@ -1,4 +1,4 @@
-public class MiddleElement {
+public class FindMiddle {
     public static void main(String[] args) {
         System.out.println();
         ListNode node = new ListNode();
@@ -36,7 +36,7 @@ class ListNode{ //self-referential class
         //System.out.println("NULL");
     }
 
-    public int middleElement(ListNode head){ //for mid-1 even length
+    public ListNode findMiddle(ListNode head){ //for mid-1 even length
         ListNode slow=head; //slow pointer jumps 1 at a time
         ListNode fast=head; //fast pointer jumps 2 at a time
         //so basically when fast pointer reaches the end, slow will be in the middle
@@ -48,6 +48,6 @@ class ListNode{ //self-referential class
             slow=slow.next;
             fast=fast.next.next;
         }
-        return slow.val;
+        return slow;
     }
 }
