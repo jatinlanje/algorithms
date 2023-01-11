@@ -1,4 +1,4 @@
-public class RemoveKthNodeFromEnd {
+public class DeleteKthNodeFromEnd {
     public static void main(String[] args) {
         System.out.println();
         ListNode node = new ListNode();
@@ -52,7 +52,7 @@ class ListNode{ //self-referential class
     can be done using two pointer also!
      */
 
-    public ListNode removeKthNodeFromEnd(ListNode head, int k){
+    public ListNode deleteKthNodeFromEnd(ListNode head, int k){
         if(findLength(head)==0 || findLength(head)==1){
             return null;
         }
