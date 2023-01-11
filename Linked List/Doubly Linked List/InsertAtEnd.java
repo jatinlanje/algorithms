@@ -1,4 +1,4 @@
-public class InsertAtStart {
+public class InsertAtEnd {
     public static void main(String[] args) {
         System.out.println();
         ListNode node = new ListNode(15);
