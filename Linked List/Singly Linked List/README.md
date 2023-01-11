@@ -25,4 +25,4 @@
 | 23 | ReverseInKGroups |
 | 24 | IsPalindrome |
 | 25 | PartitionList |
-PartitionList
+
