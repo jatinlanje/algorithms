@@ -24,3 +24,5 @@
 | 22 | ReverseFirstKNodes |
 | 23 | ReverseInKGroups |
 | 24 | IsPalindrome |
+| 25 | PartitionList |
+PartitionList
