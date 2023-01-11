@@ -14,8 +14,8 @@
 | 12 | DeleteAtEnd |
 | 13 | InsetAtKthPosition |
 | 14 | DeleteAtKthPosition |
-| 15  | RemoveKthNodeFromEnd |
-| 16 | DeleteMiddleNode |
+| 15 | DeleteMiddleNode |
+| 16 | DeleteKthNodeFromEnd |
 | 17 | DeleteDuplicatesFromSortedList |
 | 18 | MergeTwoSortedLinkedList |
 | 19 | MergeSortLinkedList |
