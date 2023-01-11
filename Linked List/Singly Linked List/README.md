@@ -14,11 +14,12 @@
 | 12 | DeleteAtEnd |
 | 13 | InsetAtKthPosition |
 | 14 | DeleteAtKthPosition |
-| 15 | DeleteMiddleNode |
-| 16 | DeleteDuplicatesFromSortedList |
-| 17 | MergeTwoSortedLinkedList |
-| 18 | MergeSortLinkedList |
-| 19 | PrintLinkedListReverse |
-| 20 | ReverseLinkedList |
-| 21 | ReverseFirstKNodes |
+| 15  | RemoveKthNodeFromEnd |
+| 16 | DeleteMiddleNode |
+| 17 | DeleteDuplicatesFromSortedList |
+| 18 | MergeTwoSortedLinkedList |
+| 19 | MergeSortLinkedList |
+| 20 | PrintLinkedListReverse |
+| 21 | ReverseLinkedList |
+| 22 | ReverseFirstKNodes |
 
