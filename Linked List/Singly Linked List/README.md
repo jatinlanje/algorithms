@@ -6,7 +6,7 @@
 | 4 | CheckSortedLinkedList |
 | 5 | CompareLinkedList |
 | 6 | FindLength|
-| 7 | MiddleElement |
+| 7 | FindMiddle |
 | 8 | InsertAtStart |
 | 9 | DeleteAtStart |
 | 10 | InsertAtEnd |
