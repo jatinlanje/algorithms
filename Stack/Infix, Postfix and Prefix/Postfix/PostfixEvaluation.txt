@@ -1,0 +1,8 @@
+PostfixEvaluation:
+
+1.Initialize an empty stack.
+2.Scan the postfix expression from left to right.
+3.If the scanned character is an operand, push it to the stack.
+4.If the scanned character is an operator, pop two operands from the stack, perform the operation, and push the result back to the stack.
+5.Repeat steps 2-4 until all characters are scanned.
+6.The result will be the top element of the stack, which can be popped and returned.
