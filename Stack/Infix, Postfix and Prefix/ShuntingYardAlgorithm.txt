@@ -1,0 +1,11 @@
+The Shunting Yard Algorithm is a method for parsing mathematical expressions specified in infix notation. It can be used to convert an infix expression to postfix notation (also known as Reverse Polish Notation) which can then be evaluated using a stack-based algorithm. The main advantage of using postfix notation is that it eliminates the need for parentheses and the need to keep track of precedence and associativity, making it easier to evaluate the expression.
+
+The algorithm works by maintaining two stacks: one for operators and one for operands. It iterates through the characters in the infix expression, and for each character it does one of the following:
+
+1.If the character is an operand, it is pushed onto the operand stack.
+2.If the character is an operator, it is pushed onto the operator stack, but only if it has higher or equal precedence than the operator on the top of the operator stack.
+3.If the character is an open parenthesis, it is pushed onto the operator stack.
+4.If the character is a close parenthesis, operators are popped from the operator stack and added to the output queue until an open parenthesis is encountered.
+5.After all the characters have been processed, any remaining operators are popped from the operator stack and added to the output queue. The final result is the postfix expression in the output queue.
+
+The Shunting Yard Algorithm is widely used in compilers, calculators, and other applications that need to evaluate mathematical expressions. It is a well-established algorithm that is simple to implement, and it is highly efficient, making it a good choice for use in a variety of contexts.
