@@ -21,6 +21,18 @@ public class InfixEvaluation {
             else if(Character.isDigit(c)) {
                 operandStack.push(c - '0');
             }
+            /*
+            //multi digit support
+            else if (Character.isDigit(c)) {
+                String operand = "";
+                while (i < expression.length() && Character.isDigit(expression.charAt(i))) {
+                    operand += expression.charAt(i);
+                    i++;
+                }
+                operandStack.push(Integer.parseInt(operand));
+                i--;
+            }
+            */
             // If the character is an operator, check its precedence and perform the operation
             else if (c == '+' || c == '-' || c == '*' || c == '/' || c == '^') {
                 while (!operatorStack.isEmpty() && precedence(c) <= precedence(operatorStack.peek())) {
