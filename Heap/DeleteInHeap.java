@@ -1,3 +1,4 @@
+//percolate down or shift down
 class MinHeap {
     ArrayList<Integer> list = new ArrayList<>();
 
