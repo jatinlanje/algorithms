@@ -1,3 +1,4 @@
+//percolate up or shift up
 class InsertInHeap {
     ArrayList<Integer> list = new ArrayList<>();
 
