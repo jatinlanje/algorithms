@@ -9,7 +9,7 @@ public class BinarySearch {
         int left=0;
         int right=array.length-1;
         while(left<=right) {
-            int mid = left+(right-1)/2;
+            int mid = left+(right-left)/2;
             if (array[mid] == k) { //are you the one?
                 return mid;
             } else if (array[mid] < k) { //if the element at the midpoint is less than the element we're looking for
