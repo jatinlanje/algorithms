@@ -17,6 +17,7 @@
 | 15 | DeleteMiddleNode |
 | 16 | DeleteKthNodeFromEnd |
 | 17 | DeleteDuplicatesFromSortedList |
+| 18 | DeleteDuplicatesFromSortedList-ll |
 | 18 | MergeTwoSortedLinkedList |
 | 19 | MergeSortLinkedList |
 | 20 | PrintLinkedListReverse |
