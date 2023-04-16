@@ -17,13 +17,13 @@
 | 15 | DeleteMiddleNode |
 | 16 | DeleteKthNodeFromEnd |
 | 17 | DeleteDuplicatesFromSortedList |
-| 18 | DeleteDuplicatesFromSortedList-ll |
-| 18 | MergeTwoSortedLinkedList |
-| 19 | MergeSortLinkedList |
-| 20 | PrintLinkedListReverse |
-| 21 | ReverseLinkedList |
-| 22 | ReverseFirstKNodes |
-| 23 | ReverseInKGroups |
-| 24 | IsPalindrome |
-| 25 | PartitionList |
+| 18 | DeleteDuplicatesFromSortedList2 |
+| 19 | MergeTwoSortedLinkedList |
+| 20 | MergeSortLinkedList |
+| 21 | PrintLinkedListReverse |
+| 22 | ReverseLinkedList |
+| 23 | ReverseFirstKNodes |
+| 24 | ReverseInKGroups |
+| 25 | IsPalindrome |
+| 26 | PartitionList |
 
