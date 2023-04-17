@@ -59,4 +59,21 @@ class ListNode{ //self-referential class
         head.next=h1;
         return h2;
     }
+    
+    public ListNode reverseFirstK(ListNode head, int k) {
+        if(head==0){
+            return head;
+        }
+        ListNode prevNode=null;
+        ListNode currNode=head;
+        while(currNode!=null && k>0){
+            ListNode nextNode=currNode.next;
+            currNode.next=prevNode;
+            prevNode=currNode;
+            currNode=nextNode;
+            k--;
+        }
+        head=prevNode;
+        return head;
+    }
 }
