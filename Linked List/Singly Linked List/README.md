@@ -22,8 +22,9 @@
 | 20 | MergeSortLinkedList |
 | 21 | PrintLinkedListReverse |
 | 22 | ReverseLinkedList |
-| 23 | ReverseFirstKNodes |
-| 24 | ReverseInKGroups |
-| 25 | IsPalindrome |
-| 26 | PartitionList |
+| 23 | ReverseLinkedList2 |
+| 24 | ReverseFirstKNodes |
+| 25 | ReverseInKGroups |
+| 26 | IsPalindrome |
+| 27 | PartitionList |
 
