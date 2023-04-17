@@ -82,6 +82,7 @@ class ListNode{ //self-referential class
             head.next = nextNode;
         }
 
-        return prevNode;
+        head=prevNode;
+        return head;
     }
 }
