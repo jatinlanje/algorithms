@@ -54,5 +54,21 @@ class ListNode{ //self-referential class
         }
         return h2;
     }
+    
+    public ListNode reverseList(ListNode head) {
+        if(head==null || head.next==null){
+            return head;
+        }
+        ListNode prevNode=null;
+        ListNode currNode=head;
+        while(currNode!=null){
+            ListNode nextNode=currNode.next;
+            currNode.next=prevNode;
+            prevNode=currNode;
+            currNode=nextNode;
+        }
+        head=prevNode;
+        return head;
+    }
 }
 //After the loop breaks, where will the head point to? last non-null node
