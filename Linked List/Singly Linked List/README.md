@@ -14,6 +14,7 @@
 | 12 | DeleteAtEnd |
 | 13 | InsetAtKthPosition |
 | 14 | DeleteAtKthPosition |
+| 15 | DeleteNodeWithoutHead |
 | 15 | DeleteMiddleNode |
 | 16 | DeleteKthNodeFromEnd |
 | 17 | DeleteDuplicatesFromSortedList |
