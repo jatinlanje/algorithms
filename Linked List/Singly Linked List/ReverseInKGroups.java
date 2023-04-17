@@ -67,5 +67,46 @@ class ListNode{ //self-referential class
         head.next=reverseInKGroups(h1,k);
         return h2;
     }
+    
+    public ListNode reverseKGroup(ListNode head, int k) {
+        if (k <= 1 || head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode prevNode = null;
+        ListNode currNode = head;
+        ListNode nextNode = null;
+        int count = 0;
+
+        // Count the number of nodes in the list
+        while (currNode != null && count < k) {
+            count++;
+            currNode = currNode.next;
+        }
+
+        // Check if there are enough nodes to form a group of k nodes
+        if (count < k) {
+            return head;
+        }
+
+        currNode = head;
+        count = 0;
+
+        // Reverse k nodes in a group
+        while (currNode != null && count < k) {
+            nextNode = currNode.next;
+            currNode.next = prevNode;
+            prevNode = currNode;
+            currNode = nextNode;
+            count++;
+        }
+
+        // Recursively reverse the next k nodes
+        if (nextNode != null) {
+            head.next = reverseKGroup(nextNode, k);
+        }
+
+        return prevNode;
+    }
 
 }
