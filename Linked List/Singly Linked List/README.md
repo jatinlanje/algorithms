@@ -14,10 +14,10 @@
 | 12 | DeleteAtEnd |
 | 13 | InsetAtKthPosition |
 | 14 | DeleteAtKthPosition |
-| 15 | DeleteNodeWithoutHead |
-| 16 | RemoveElements | 
 | 17 | DeleteMiddleNode |
 | 18 | DeleteKthNodeFromEnd |
+| 15 | DeleteNodeWithoutHead |
+| 16 | RemoveElements | 
 | 19 | IntersectionOfTwoLinkedLists | 
 | 19 | DeleteDuplicatesFromSortedList |
 | 20 | DeleteDuplicatesFromSortedList2 |
