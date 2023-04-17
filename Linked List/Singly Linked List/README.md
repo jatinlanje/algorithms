@@ -18,6 +18,7 @@
 | 16 | RemoveElements | 
 | 17 | DeleteMiddleNode |
 | 18 | DeleteKthNodeFromEnd |
+| 19 | IntersectionOfTwoLinkedLists | 
 | 19 | DeleteDuplicatesFromSortedList |
 | 20 | DeleteDuplicatesFromSortedList2 |
 | 21 | MergeTwoSortedLinkedList |
