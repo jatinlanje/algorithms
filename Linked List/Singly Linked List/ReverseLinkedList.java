@@ -61,8 +61,9 @@ class ListNode{ //self-referential class
         }
         ListNode prevNode=null;
         ListNode currNode=head;
+        ListNode nextNode = null;
         while(currNode!=null){
-            ListNode nextNode=currNode.next;
+            nextNode=currNode.next;
             currNode.next=prevNode;
             prevNode=currNode;
             currNode=nextNode;
