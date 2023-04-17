@@ -25,6 +25,7 @@
 | 23 | ReverseLinkedList2 |
 | 24 | ReverseFirstKNodes |
 | 25 | ReverseInKGroups |
-| 26 | IsPalindrome |
-| 27 | PartitionList |
+| 26 | RotateList |
+| 27 | IsPalindrome |
+| 28 | PartitionList |
 
