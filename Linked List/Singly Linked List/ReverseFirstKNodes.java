@@ -61,19 +61,27 @@ class ListNode{ //self-referential class
     }
     
     public ListNode reverseFirstK(ListNode head, int k) {
-        if(head==0){
+        if (k <= 1 || head == null || head.next == null) {
             return head;
         }
-        ListNode prevNode=null;
-        ListNode currNode=head;
-        while(currNode!=null && k>0){
-            ListNode nextNode=currNode.next;
-            currNode.next=prevNode;
-            prevNode=currNode;
-            currNode=nextNode;
-            k--;
+
+        ListNode prevNode = null;
+        ListNode currNode = head;
+        ListNode nextNode = null;
+        int count = 0;
+
+        while (currNode != null && count < k) {
+            nextNode = currNode.next;
+            currNode.next = prevNode;
+            prevNode = currNode;
+            currNode = nextNode;
+            count++;
         }
-        head=prevNode;
-        return head;
+
+        if (nextNode != null) {
+            head.next = nextNode;
+        }
+
+        return prevNode;
     }
 }
