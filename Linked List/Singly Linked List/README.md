@@ -32,3 +32,6 @@
 | 29 | IsPalindrome |
 | 30 | PartitionList |
 | 31 | AddTwoNumbers |
+| 31 | CheckIfCycleExists |
+| 31 | StartNodeOfCycle |
+| 31 | LengthOfCycle |
