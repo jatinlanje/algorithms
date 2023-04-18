@@ -17,43 +17,49 @@ public class StackArrayList<T> {
 
     }
 
-    private ArrayList<T> list; // underlying data structure
-    private int top; // index of the top element
-
-    // constructor
-    public StackArrayList() {
-        this.list = new ArrayList<>();
-        this.top = -1; // initialize top to -1 for an empty stack
-    }
-
-    // push method
-    public void push(T item) {
-        // add the item at the top index and increment top
-        list.add(++top, item);
-    }
-
-    // pop method
-    public T pop() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
-        }
-        // remove the item at the top index and decrement top
-        return list.remove(top--);
-    }
+    ArrayList<Integer> list = new ArrayList<>(); // underlying data structure
 
     // check if stack is empty
     public boolean isEmpty() {
-        return top == -1;
+        return list.size() == 0;
+    }
+
+    // push method
+    public void push(int data) {
+        // add the item at the end
+        list.add(data);
+    }
+
+    // pop method
+    public int pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+        // remove the item at the end
+        int top=list.get(list.size()-1);
+        list.remove(list.size()-1);
+        return top;
+    }
+
+    // peek method
+    public int peek(){
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+        return list.get(list.size()-1);
     }
 
     public void display() {
         if (isEmpty()) {
             System.out.println("Stack is empty!");
         } else {
-            for (int i = top; i >= 0; i--) {
+            for (int i = list.size()-1; i >= 0; i--) {
                 System.out.print(list.get(i) + " ");
             }
             System.out.println();
         }
     }
 }
+
