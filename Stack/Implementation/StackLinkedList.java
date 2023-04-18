@@ -7,40 +7,63 @@ public class StackLinkedList {
 
         myStack.display(); // displays the contents of the stack: 3 2 1
 
+//        while(!myStack.isEmpty()){ // display
+//            System.out.print(myStack.peek()+" ");
+//            myStack.pop();
+//        }
+
         int poppedValue = myStack.pop(); // removes and returns the value at the top of the stack (3)
         System.out.println("Popped value: " + poppedValue); // prints "Popped value: 3"
 
         myStack.display(); // displays the contents of the stack: 2 1
     }
-    private Node top;
 
-    private class Node {
+    static class Node {
         int data;
         Node next;
+
+        public Node(int data) {
+            this.data=data;
+            next=null;
+        }
     }
 
+    public static Node head;
+
     // check if stack is empty
-    public boolean isEmpty() {
-        return top == null;
+    public static boolean isEmpty() {
+        return head == null;
     }
 
     // push value into stack
-    public void push(int value) {
-        Node newNode = new Node();
-        newNode.data = value;
-        newNode.next = top;
-        top = newNode;
+    public static void push(int value) {
+        Node newNode = new Node(value);
+        if(isEmpty()){
+            head=newNode;
+            return;
+        }
+        newNode.next = head;
+        head = newNode;
     }
 
     // pop value from stack
-    public int pop() {
+    public static int pop() {
         if (isEmpty()) {
             System.out.println("Stack is empty!");
             return -1;
         } else {
-            int value = top.data;
-            top = top.next;
-            return value;
+            int top = head.data;
+            head = head.next;
+            return top;
+        }
+    }
+
+    public static int peek(){
+        if (isEmpty()) {
+            System.out.println("Stack is empty!");
+            return -1;
+        } else {
+            return head.data;
         }
     }
 
@@ -49,7 +72,7 @@ public class StackLinkedList {
         if (isEmpty()) {
             System.out.println("Stack is empty!");
         } else {
-            Node current = top;
+            Node current = head;
             while (current != null) {
                 System.out.print(current.data + " ");
                 current = current.next;
