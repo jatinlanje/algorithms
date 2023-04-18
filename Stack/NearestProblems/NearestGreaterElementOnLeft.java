@@ -25,7 +25,7 @@ public class NearestGreaterElementOnLeft {
             else{
                 res[i]=stack.peek(); 
             }
-            // Push the current element onto the stack
+            // Push the current element into the stack
             stack.push(arr[i]); 
         }
         return res;
