@@ -1,0 +1,71 @@
+class Solution {
+    Integer nsl[];
+    Integer nsr[];
+    public int maximalRectangle(char[][] matrix) {
+        int n = matrix.length;
+        int m = matrix[0].length;
+        int[] heights = new int[m];
+        int max = Integer.MIN_VALUE;
+        for(int i = 0; i< n; i++){
+            for(int j = 0 ; j < m ; j++){
+                if(matrix[i][j] == '1'){
+                    heights[j] += 1;
+                } 
+                else{
+                    heights[j] = 0;
+                } 
+            }
+            int area = maximumAreaHistogram(heights);
+            max = Math.max(max, area);
+        }
+        return max;
+    }
+    public int maximumAreaHistogram(int[] heights) {
+        int result=0;
+        int n=heights.length;
+        nsl=new Integer[n];
+        nsr=new Integer[n];
+        nearestSmallerIndexOnLeft(heights);
+        nearestSmallerIndexOnRight(heights);
+        int width[]=new int[n];
+        for(int i=0; i<n; i++){
+            width[i]=nsr[i]-nsl[i]-1;
+        }
+        int area[]=new int[n];
+        for(int i=0; i<n; i++){
+            area[i]=width[i]*heights[i];
+            result=Math.max(result,area[i]);
+        }
+        return result;
+    }
+    public void nearestSmallerIndexOnLeft(int arr[]){
+        Stack<Integer> stack=new Stack<>();
+        for(int i=0; i<arr.length; i++){
+            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
+                stack.pop();
+            }
+            if(stack.isEmpty()){
+                nsl[i]=-1;
+            }
+            else{
+                nsl[i]=stack.peek();
+            }
+            stack.push(i);
+        }
+    }
+    public void nearestSmallerIndexOnRight(int arr[]){
+        Stack<Integer> stack=new Stack<>();
+        for(int i=arr.length-1; i>=0; i--){
+            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
+                stack.pop();
+            }
+            if(stack.isEmpty()){
+                nsr[i]=arr.length;
+            }
+            else{
+                nsr[i]=stack.peek();
+            }
+            stack.push(i);
+        }
+    }
+}
