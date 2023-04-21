@@ -1,0 +1,28 @@
+class StockSpanner {
+    private Stack<Integer> prices; // Stack to store stock prices
+    private Stack<Integer> spans; // Stack to store corresponding spans
+
+    public StockSpanner() {
+        prices = new Stack<>();
+        spans = new Stack<>();
+    }
+
+    public int next(int price) {
+        int span = 1; // Default span is 1 for the current price
+        while (!prices.isEmpty() && prices.peek() <= price) {
+            // Pop elements from prices stack and sum spans from spans stack
+            // as long as the prices are less than or equal to the current price
+            prices.pop();
+            span += spans.pop();
+        }
+        prices.push(price); // Push the current price onto the prices stack
+        spans.push(span); // Push the calculated span onto the spans stack
+        return span; // Return the calculated span for the current price
+    }
+}
+
+/**
+ * Your StockSpanner object will be instantiated and called as such:
+ * StockSpanner obj = new StockSpanner();
+ * int param_1 = obj.next(price);
+ */
