@@ -12,7 +12,7 @@ class Solution {
                 while(stack.peek() != 0){
                     val+=stack.pop();
                 }
-                val = Math.max(2*val,1);c//() gives 1
+                val = Math.max(2*val,1); //() gives 1
                 stack.pop();
                 stack.push(val);
             }
