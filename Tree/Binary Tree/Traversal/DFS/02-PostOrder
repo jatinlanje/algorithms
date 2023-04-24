@@ -1,0 +1,61 @@
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        postOrder(root,result);
+        return result;
+    }
+    public void postOrder(TreeNode root, ArrayList<Integer> result){
+        //terminating condition
+        if(root==null){
+            return;  
+        }
+        //recursively call postOrder on the left subtree
+        postOrder(root.left,result); 
+        //recursively call postOrder on the right subtree
+        postOrder(root.right,result); 
+        //add the current node's value to the result list
+        result.add(root.val); 
+    }
+}
+
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if(root==null){
+            return result; 
+        }
+        TreeNode current=root;
+        //create a stack to keep track of the nodes to visit
+        Stack<TreeNode> stack = new Stack<>();
+        //iterate while current node is not null or stack is not empty
+        while(current!=null || !stack.isEmpty()){
+            if(current!=null){
+                //push the current node to the stack
+                stack.push(current); 
+                //move to the left child
+                current=current.left; 
+            } 
+            else{
+                //get the right child of the top element of the stack
+                TreeNode temp=stack.peek().right;
+                if(temp==null){
+                    temp=stack.peek();
+                    stack.pop();
+                    //add the value of the popped node to the result list
+                    result.add(temp.val); 
+                    while(!stack.isEmpty() && temp==stack.peek().right){
+                        temp=stack.peek();
+                        stack.pop();
+                        //add the value of the popped node to the result list
+                        result.add(temp.val);
+                    }
+                } 
+                else{
+                    //move to the right child
+                    current=temp; 
+                }
+            }
+        }
+        return result;
+    }
+}
