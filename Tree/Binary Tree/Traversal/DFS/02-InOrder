@@ -1,0 +1,47 @@
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        inOrder(root,result);
+        return result;
+    }
+    public void inOrder(TreeNode root, ArrayList<Integer> result){
+        //terminating condition
+        if(root==null){
+            return;
+        }
+        //recursively call inOrder on the left subtree
+        inOrder(root.left,result);
+        // add the current node's value to the result list
+        result.add(root.val);
+        // recursively call inOrder on the right subtree
+        inOrder(root.right,result);
+    }
+}
+
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();   
+        //initialize an empty stack to store TreeNode
+        Stack<TreeNode> stack = new Stack<>();  
+        //node variable to traverse the tree
+        TreeNode node=root;                  
+        //Iterate until stack is empty
+        while(!stack.isEmpty() || node!=null){
+            if(node!=null){
+                //push the current node to stack
+                stack.push(node);
+                //move to the left child
+                node=node.left;
+            }
+            else{
+                //pop the top node from stack
+                node=stack.pop();
+                //add the popped node's value to the result list
+                result.add(node.val);
+                //move to the right child
+                node=node.right;
+            }
+        }
+        return result;
+    }
+}
