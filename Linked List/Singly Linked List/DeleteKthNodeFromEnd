@@ -1,6 +1,6 @@
 class Solution { //two pass
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        if(findLength(head)==0 || findLength(head)==1){
+        if(findLength(head)==0){
             return null;
         }
         if(findLength(head)==n){
