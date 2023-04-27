@@ -19,3 +19,34 @@ class Solution {
         return start.next;
     }
 }
+
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        if(findLength(head)==0 || findLength(head)==1){
+            return null;
+        }
+        if(findLength(head)==n){
+            return head.next=head.next;
+        }
+        if(n<findLength(head)){
+            int k=findLength(head)-n;
+            ListNode current=head;
+            int count=0;
+            while(count<k-1){
+                current=current.next;
+                count++;
+            }
+            current.next=current.next.next;
+        }
+        return head; 
+    }
+    public int findLength(ListNode head){
+        int length=0;
+        ListNode current=head;
+        while(current!=null){
+            length++;
+            current=current.next;
+        }
+        return length;
+    }
+}
