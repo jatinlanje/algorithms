@@ -10,7 +10,7 @@ public class MergeSort {
             return array;
         }
         int mid = array.length/2;
-        int left[] = mergeSort(Arrays.copyOfRange(array,0,mid));
+        int left[] = mergeSort(Arrays.copyOfRange(array,0,mid)); //because sublist is exclusive 
         int right[] = mergeSort(Arrays.copyOfRange(array, mid, array.length));
         return merge(left, right);
     }
