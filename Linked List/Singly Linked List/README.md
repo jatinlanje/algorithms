@@ -29,7 +29,7 @@
 | 26 | ReverseFirstKNodes |
 | 27 | ReverseInKGroups |
 | 28 | RotateList |
-| 28 | Reorder List |
+| 28 | ReorderList |
 | 29 | IsPalindrome |
 | 30 | PartitionList |
 | 31 | AddTwoNumbers |
