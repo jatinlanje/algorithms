@@ -7,7 +7,7 @@ Stack implementation:
 -->using ArrayList
 -need to check underflow
 
--->using LinkedList
+-->using LinkedList(java implementation)
 -push and pop at head
 
 -->using Queue
