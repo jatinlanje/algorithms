@@ -10,7 +10,7 @@ Queues implementation:
 -does not solve issues for memory wastage
 
 -->using LinkedList
--insert at tail, delete from front
+-insert at tail/rear, delete from front
 
 -->using 2 Stacks
 -overhead for poll and peek operations
