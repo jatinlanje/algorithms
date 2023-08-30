@@ -1,56 +1,62 @@
-import java.util.LinkedList;
-
 public class QueueLinkedList {
-    public static void main(String[] args) {
-        QueueLinkedList queue = new QueueLinkedList();
+    static class Node{
+        int data;
+        Node next;
 
-        // adding elements to the queue
-        queue.enqueue(1);
-        queue.enqueue(2);
-        queue.enqueue(3);
-
-        System.out.println("Front element is: " + queue.front());
-        System.out.println("Rear element is: " + queue.rear());
-
-        //removing elements from the queue
-        queue.dequeue();
-        queue.dequeue();
-
-        System.out.println("Front element is: " + queue.front());
-        System.out.println("Rear element is: " + queue.rear());
+        public Node(int data) {
+            this.data = data;
+            next = null;
+        }
     }
 
-    LinkedList<Integer> list = new LinkedList<>();
+    private Node front;
+    private Node rear;
 
-    // Method to add an item to the queue at tail
-    public void enqueue(int item) {
-        list.addLast(item);
+    public boolean isEmpty(){
+        return front==null;
     }
 
-    // Method to remove an item from queue from front.
-    public int dequeue() {
-        if (list.isEmpty()) {
-            System.out.println("Queue is empty");
+    public void enqueue(int val){
+        Node newNode = new Node(val);
+        if(isEmpty()){
+            front = rear = newNode;
+        }
+        else{
+            rear.next=newNode;
+            rear=newNode;
+        }
+    }
+
+    public int dequeue(){
+        if(isEmpty()){
+            System.out.println("Queue is Empty");
             return -1;
         }
-        return list.removeFirst();
+        int val = front.data;
+        front=front.next;
+        if(front==null){
+            rear=null;
+        }
+        return val;
     }
 
-    // Method to get front of queue
-    public int front() {
-        if (list.isEmpty()) {
-            System.out.println("Queue is empty");
-            return -1;
+    public int peek(){
+        if(isEmpty()){
+            System.out.println("Queue is Empty");
         }
-        return list.getFirst();
+        return front.data;
     }
 
-    // Method to get rear of queue
-    public int rear() {
-        if (list.isEmpty()) {
-            System.out.println("Queue is empty");
-            return -1;
+    public void display(){
+        if(isEmpty()){
+            System.out.println("Queue is Empty");
         }
-        return list.getLast();
+        Node current=front;
+        while(current!=null){
+            System.out.print(current.data + " ");
+            current=current.next;
+        }
+        System.out.println();
     }
+
 }
