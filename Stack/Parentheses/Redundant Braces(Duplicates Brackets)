@@ -1,5 +1,5 @@
 class Solution {
-    public static int checkRedundancy(String s) {
+    public static boolean checkRedundancy(String s) {
         // code here
         Stack<Character> stack=new Stack<>();
         for(int i=0; i<s.length(); i++){
@@ -11,7 +11,7 @@ class Solution {
                 if(ch==')'){
                     char top=stack.peek();
                     if(top=='('){ //no operators inside brackets
-                        return 1;
+                        return true;
                     }
                     else{
                         while(stack.peek()!='('){
@@ -22,6 +22,6 @@ class Solution {
                 }
             }
         }
-        return 0;
+        return false;
     }
 }
