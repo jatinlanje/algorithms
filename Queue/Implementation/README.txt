@@ -1,6 +1,6 @@
 Queues implementation: 
 
--->using Arrays 
+-->using Arrays (hard)
 -maximum size of the array must be defined in advance and cannot be changed during the implementation
 -TC of poll operation is O(n) (can be improved to O(1) using front and rear pointer)
 -implemented using a circular array to utilise memory 
