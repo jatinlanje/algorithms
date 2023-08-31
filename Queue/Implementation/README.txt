@@ -8,6 +8,7 @@ Queues implementation:
 
 -->using ArrayList
 -does not solve issues for memory wastage
+-enqueue at end dequeue at front
 
 -->using LinkedList
 -insert at tail/rear, delete from front
