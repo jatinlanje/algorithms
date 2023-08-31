@@ -10,7 +10,7 @@ Queues implementation:
 -does not solve issues for memory wastage
 -enqueue at end dequeue at front
 
--->using LinkedList
+-->using LinkedList 
 -insert at tail/rear, delete from front
 
 -->using 2 Stacks
