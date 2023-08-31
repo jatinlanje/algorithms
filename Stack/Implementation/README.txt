@@ -10,5 +10,5 @@ Stack implementation:
 -->using LinkedList(java implementation)
 -push and pop at head
 
--->using Queue
+-->using Queue (lil complex)
 -TC of push operation is O(n)
