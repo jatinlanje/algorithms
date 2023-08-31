@@ -6,7 +6,7 @@ Queues implementation:
 -implemented using a circular array to utilise memory 
 -overflow and underflow
 
--->using ArrayList
+-->using ArrayList (easy)
 -does not solve issues for memory wastage
 -enqueue at end dequeue at front
 
