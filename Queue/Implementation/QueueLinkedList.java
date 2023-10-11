@@ -7,6 +7,7 @@ public class QueueLinkedList {
             this.data = data;
             next = null;
         }
+
     }
 
     private Node front;
